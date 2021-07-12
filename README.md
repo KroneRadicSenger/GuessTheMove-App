@@ -78,7 +78,7 @@ This is our Flutter App for our Chess Guess The Move App created as part of our 
 </details>
 
 ## Creating an analyzed games bundle
-Follow the instructions in the ```README.md``` file of the ```Python Game Preprocessing``` program to create a gzipped annotated analysis output file
+Follow the instructions in the ```README.md``` file of the [Python Game Preprocessing](https://github.com/KroneRadicSenger/GuessTheMove-Preprocessing) program to create a gzipped annotated analysis output file
 from a pgn file containing multiple games. To use this gzipped file as an analyzed games bundle, you should copy it to the ```assets/analyzed_games``` directory of this app
 and rename it to match the following format:
 1. For an analyzed games bundle by grandmaster and year:
