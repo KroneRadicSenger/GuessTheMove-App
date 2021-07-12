@@ -8,8 +8,9 @@ import 'package:guess_the_move/theme/theme.dart';
 class AboutElement extends StatelessWidget {
   final String title;
   final List<String> names;
+  final List<Widget>? trailingWidgets;
 
-  AboutElement({required this.title, required this.names, Key? key}) : super(key: key);
+  AboutElement({required this.title, required this.names, this.trailingWidgets, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) => BlocBuilder<UserSettingsBloc, UserSettingsState>(builder: (context, state) {
@@ -35,6 +36,7 @@ class AboutElement extends StatelessWidget {
                   textAlign: TextAlign.justify,
                 ),
               ),
+              if (trailingWidgets != null) ...trailingWidgets!,
             ],
           ),
         );

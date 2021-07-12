@@ -4,8 +4,13 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:guess_the_move/bloc/user_settings_bloc.dart';
 import 'package:guess_the_move/components/titled_container.dart';
+import 'package:guess_the_move/model/game_mode.dart';
 import 'package:guess_the_move/screens/settings/pages/about/components/about_element.dart';
+import 'package:guess_the_move/screens/settings/utils/show_confirmation_dialog.dart';
 import 'package:guess_the_move/theme/theme.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+const githubRepositoriesUrl = 'https://github.com/KroneRadicSenger';
 
 class AboutPage extends StatelessWidget {
   AboutPage({Key? key}) : super(key: key);
@@ -51,11 +56,34 @@ class AboutPage extends StatelessWidget {
                 ],
               ),
               AboutElement(
-                title: 'Github Repository',
+                title: 'Github Repositories',
                 names: [
-                  'Du findest das Github Repository zu diesem Projekt unter folgendem Link:',
-                  '',
-                  'https://github.com/TODO', // TODO Add repository url
+                  'Du findest die Github Repositories zu diesem Projekt unter folgendem Link:',
+                ],
+                trailingWidgets: [
+                  Container(height: 10),
+                  ElevatedButton(
+                    onPressed: () async {
+                      if (await canLaunch(githubRepositoriesUrl)) {
+                        await launch(
+                          githubRepositoriesUrl,
+                          forceSafariVC: false,
+                          forceWebView: false,
+                        );
+                      } else {
+                        showConfirmationDialog(
+                          context,
+                          GameModeEnum.findTheGrandmasterMoves,
+                          state,
+                          () {},
+                          'Fehler',
+                          'Die Webseite konnte nicht im Browser geöffnet werden!',
+                          onlyConfirm: true,
+                        );
+                      }
+                    },
+                    child: const Text(githubRepositoriesUrl, textAlign: TextAlign.center),
+                  ),
                 ],
               ),
               Container(height: 20),
