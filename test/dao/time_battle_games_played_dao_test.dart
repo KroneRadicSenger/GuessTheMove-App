@@ -49,7 +49,11 @@ void main() {
     debugPrint('Running TimeBattleGamesPlayedDao tests..');
 
     test('no data is retrieved before inserting data', () async {
-      var gamesPlayed = await TimeBattleGamesPlayedDao(database: db).getByAnalyzedGamesBundleAndInitialTimeInSeconds(analyzedGamesBundle, initialTimeInSeconds1);
+      var gamesPlayed = await TimeBattleGamesPlayedDao(database: db).getAll();
+      expect(gamesPlayed, isNotNull);
+      expect(gamesPlayed, isEmpty);
+
+      gamesPlayed = await TimeBattleGamesPlayedDao(database: db).getByAnalyzedGamesBundleAndInitialTimeInSeconds(analyzedGamesBundle, initialTimeInSeconds1);
       expect(gamesPlayed, isNotNull);
       expect(gamesPlayed, isEmpty);
 
@@ -172,7 +176,12 @@ void main() {
 
       // Test retrieving this first game played
 
-      var gamesPlayed = await TimeBattleGamesPlayedDao(database: db).getByAnalyzedGamesBundleAndInitialTimeInSeconds(analyzedGamesBundle, initialTimeInSeconds1);
+      var gamesPlayed = await TimeBattleGamesPlayedDao(database: db).getAll();
+      expect(gamesPlayed, isNotNull);
+      expect(gamesPlayed!.length, 1);
+      expect(gamesPlayed.first, gamePlayed1);
+
+      gamesPlayed = await TimeBattleGamesPlayedDao(database: db).getByAnalyzedGamesBundleAndInitialTimeInSeconds(analyzedGamesBundle, initialTimeInSeconds1);
       expect(gamesPlayed, isNotNull);
       expect(gamesPlayed.length, 1);
       expect(gamesPlayed.first, gamePlayed1);
@@ -232,6 +241,12 @@ void main() {
       await TimeBattleGamesPlayedDao(database: db).insert(gamePlayed2);
 
       // Test retrieving first and second game played
+
+      gamesPlayed = await TimeBattleGamesPlayedDao(database: db).getAll();
+      expect(gamesPlayed, isNotNull);
+      expect(gamesPlayed!.length, 2);
+      expect(gamesPlayed.first, gamePlayed2);
+      expect(gamesPlayed[1], gamePlayed1);
 
       gamesPlayed = await TimeBattleGamesPlayedDao(database: db).getByAnalyzedGamesBundleAndInitialTimeInSeconds(analyzedGamesBundle, initialTimeInSeconds1);
       expect(gamesPlayed, isNotNull);
@@ -299,6 +314,13 @@ void main() {
       await TimeBattleGamesPlayedDao(database: db).insert(gamePlayed3);
 
       // Test retrieving all three games played
+
+      gamesPlayed = await TimeBattleGamesPlayedDao(database: db).getAll();
+      expect(gamesPlayed, isNotNull);
+      expect(gamesPlayed!.length, 3);
+      expect(gamesPlayed.first, gamePlayed3);
+      expect(gamesPlayed[1], gamePlayed2);
+      expect(gamesPlayed[2], gamePlayed1);
 
       gamesPlayed = await TimeBattleGamesPlayedDao(database: db).getByAnalyzedGamesBundleAndInitialTimeInSeconds(analyzedGamesBundle, initialTimeInSeconds1);
       expect(gamesPlayed, isNotNull);
@@ -377,6 +399,10 @@ void main() {
       await TimeBattleGamesPlayedDao(database: db).deleteAll();
 
       // Test that we can not retrieve any games played anymore
+
+      gamesPlayed = await TimeBattleGamesPlayedDao(database: db).getAll();
+      expect(gamesPlayed, isNotNull);
+      expect(gamesPlayed, isEmpty);
 
       gamesPlayed = await TimeBattleGamesPlayedDao(database: db).getByAnalyzedGamesBundleAndInitialTimeInSeconds(analyzedGamesBundle, initialTimeInSeconds1);
       expect(gamesPlayed, isNotNull);

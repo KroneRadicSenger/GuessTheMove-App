@@ -45,7 +45,11 @@ void main() {
     debugPrint('Running FindTheGrandmasterMovesGamesPlayedDao tests..');
 
     test('no data is retrieved before inserting data', () async {
-      var gamesPlayed = await FindTheGrandmasterMovesGamesPlayedDao(database: db).getByAnalyzedGame(analyzedGamesInBundle.first);
+      var gamesPlayed = await FindTheGrandmasterMovesGamesPlayedDao(database: db).getAll();
+      expect(gamesPlayed, isNotNull);
+      expect(gamesPlayed, isEmpty);
+
+      gamesPlayed = await FindTheGrandmasterMovesGamesPlayedDao(database: db).getByAnalyzedGame(analyzedGamesInBundle.first);
       expect(gamesPlayed, isNotNull);
       expect(gamesPlayed, isEmpty);
 
@@ -127,7 +131,12 @@ void main() {
 
       // Test retrieving this first game played
 
-      var gamesPlayed = await FindTheGrandmasterMovesGamesPlayedDao(database: db).getByAnalyzedGame(analyzedGamesInBundle.first);
+      var gamesPlayed = await FindTheGrandmasterMovesGamesPlayedDao(database: db).getAll();
+      expect(gamesPlayed, isNotNull);
+      expect(gamesPlayed!.length, 1);
+      expect(gamesPlayed.first, gamePlayed1);
+
+      gamesPlayed = await FindTheGrandmasterMovesGamesPlayedDao(database: db).getByAnalyzedGame(analyzedGamesInBundle.first);
       expect(gamesPlayed, isNotNull);
       expect(gamesPlayed.length, 1);
       expect(gamesPlayed.first, gamePlayed1);
@@ -172,6 +181,12 @@ void main() {
       await FindTheGrandmasterMovesGamesPlayedDao(database: db).insert(gamePlayed2);
 
       // Test retrieving first and second game played
+
+      gamesPlayed = await FindTheGrandmasterMovesGamesPlayedDao(database: db).getAll();
+      expect(gamesPlayed, isNotNull);
+      expect(gamesPlayed!.length, 2);
+      expect(gamesPlayed.first, gamePlayed2);
+      expect(gamesPlayed[1], gamePlayed1);
 
       gamesPlayed = await FindTheGrandmasterMovesGamesPlayedDao(database: db).getByAnalyzedGame(analyzedGamesInBundle.first);
       expect(gamesPlayed, isNotNull);
@@ -223,6 +238,13 @@ void main() {
       await FindTheGrandmasterMovesGamesPlayedDao(database: db).insert(gamePlayed3);
 
       // Test retrieving all three games played
+
+      gamesPlayed = await FindTheGrandmasterMovesGamesPlayedDao(database: db).getAll();
+      expect(gamesPlayed, isNotNull);
+      expect(gamesPlayed!.length, 3);
+      expect(gamesPlayed.first, gamePlayed3);
+      expect(gamesPlayed[1], gamePlayed2);
+      expect(gamesPlayed[2], gamePlayed1);
 
       gamesPlayed = await FindTheGrandmasterMovesGamesPlayedDao(database: db).getByAnalyzedGame(analyzedGamesInBundle.first);
       expect(gamesPlayed, isNotNull);
@@ -284,6 +306,10 @@ void main() {
       await FindTheGrandmasterMovesGamesPlayedDao(database: db).deleteAll();
 
       // Test that we can not retrieve any games played anymore
+
+      gamesPlayed = await FindTheGrandmasterMovesGamesPlayedDao(database: db).getAll();
+      expect(gamesPlayed, isNotNull);
+      expect(gamesPlayed, isEmpty);
 
       gamesPlayed = await FindTheGrandmasterMovesGamesPlayedDao(database: db).getByAnalyzedGame(analyzedGamesInBundle.first);
       expect(gamesPlayed, isNotNull);

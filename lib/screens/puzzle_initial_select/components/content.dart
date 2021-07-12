@@ -92,9 +92,6 @@ class Content extends StatelessWidget {
   void _onPressQuickPlay(final BuildContext context, final UserSettingsState state) async {
     showLoadingDialog(context, state, 'Das Spiel wird geladen');
 
-    // TODO Check if puzzle exists in chosen bundle, if not, continue with next bundle
-    // TODO if no bundle with puzzle exists, show error dialog
-
     final allAnalyzedGamesBundles = await getAllAnalyzedGamesBundles();
 
     // get a random analyzed games bundle starting index

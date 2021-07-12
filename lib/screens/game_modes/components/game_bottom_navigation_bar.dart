@@ -37,7 +37,6 @@ class GameBottomNavigationBar extends StatelessWidget {
               context.read<FindTheGrandmasterMovesBloc>().add(FindTheGrandmasterMovesGoToPreviousStateEvent());
             } else if (index == 2) {
               if (state is FindTheGrandmasterMovesShowingSummary) {
-                // TODO Show popup or alert box in UI?
                 return;
               }
               if (state is FindTheGrandmasterMovesGuessingMove) {
@@ -48,12 +47,10 @@ class GameBottomNavigationBar extends StatelessWidget {
                 }
 
                 // user has to make a guess to go to the next state
-                // TODO Show popup or alert box in UI?
                 return;
               }
               if (state is FindTheGrandmasterMovesOpponentPlayingMove && !state.moveRevealed) {
                 // user has to reveal opponent move before going to the next state
-                // TODO Show popup or alert box in UI?
                 return;
               }
               if (state.gameMode == GameModeEnum.timeBattle &&
@@ -79,7 +76,6 @@ class GameBottomNavigationBar extends StatelessWidget {
               context.read<FindTheGrandmasterMovesBloc>().add(FindTheGrandmasterMovesGoToNextStateEvent());
             } else if (index == 3) {
               if (state is FindTheGrandmasterMovesShowingSummary) {
-                // TODO Show popup or alert box in UI?
                 return;
               }
 

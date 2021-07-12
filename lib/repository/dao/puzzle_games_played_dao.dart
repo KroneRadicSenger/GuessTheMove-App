@@ -5,8 +5,6 @@ import 'package:guess_the_move/services/app_database.dart';
 import 'package:sembast/sembast.dart';
 
 class PuzzleGamesPlayedDao {
-  // TODO Test methods
-
   static const String PUZZLE_GAMES_PLAYED_STORE_NAME = 'puzzleGamesPlayed';
 
   final _puzzleGamesPlayedStore = intMapStoreFactory.store(PUZZLE_GAMES_PLAYED_STORE_NAME);

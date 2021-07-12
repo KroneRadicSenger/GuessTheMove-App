@@ -77,7 +77,7 @@ class Move {
 }
 
 @JsonSerializable()
-class EvaluatedMove {
+class EvaluatedMove extends Equatable {
   final Move move;
   final AnalyzedMoveType moveType;
   final String signedCPScore;
@@ -88,10 +88,13 @@ class EvaluatedMove {
 
   factory EvaluatedMove.fromJson(Map<String, dynamic> json) => _$EvaluatedMoveFromJson(json);
   Map<String, dynamic> toJson() => _$EvaluatedMoveToJson(this);
+
+  @override
+  List<Object?> get props => [move.san];
 }
 
 @JsonSerializable()
-class AnalyzedMove {
+class AnalyzedMove extends Equatable {
   final int ply;
   final GamePhase gamePhase;
   final GrandmasterSide turn;
@@ -102,6 +105,9 @@ class AnalyzedMove {
 
   factory AnalyzedMove.fromJson(Map<String, dynamic> json) => _$AnalyzedMoveFromJson(json);
   Map<String, dynamic> toJson() => _$AnalyzedMoveToJson(this);
+
+  @override
+  List<Object?> get props => [ply, gamePhase.toString(), turn.toString(), actualMove, alternativeMoves];
 }
 
 @JsonSerializable()

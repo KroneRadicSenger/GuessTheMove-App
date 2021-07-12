@@ -38,8 +38,6 @@ class GameSummaryBottomArea extends StatelessWidget {
       {this.padding = const EdgeInsets.symmetric(vertical: 40, horizontal: 20), Key? key})
       : super(key: key);
 
-  // TODO Move history draggable modal bottom sheet?
-
   @override
   Widget build(BuildContext context) {
     var grandmasterMovesPlayedPercentageString = '-';
