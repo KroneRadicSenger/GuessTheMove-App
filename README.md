@@ -1,6 +1,82 @@
 # Chess Guess The Move Flutter App
 This is our Flutter App for our Chess Guess The Move App created as part of our Bachelor Forschungsprojekt INF at University of Stuttgart.
 
+## Screenshots
+<h3>Menü</h3>
+<details>
+  <summary>Click here to show screenshots!</summary>
+   
+   <p float="left">
+      <img src="https://user-images.githubusercontent.com/44426503/125246293-e8766100-e2f1-11eb-9183-0be1f303dd00.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125246368-faf09a80-e2f1-11eb-8646-9a47a55a716d.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125246376-fd52f480-e2f1-11eb-9f15-cba77319f256.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125251066-3346a780-e2f7-11eb-90d1-41ccce10010c.png" width="170px"/>
+
+   </p>
+</details>
+<h3>Hauptspielmodus</h3>
+<details>
+  <summary>Click here to show screenshots!</summary>
+   
+   <p float="left">
+      <img src="https://user-images.githubusercontent.com/44426503/125248280-2c6a6580-e2f4-11eb-9271-26ad61cce490.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125248295-2ffdec80-e2f4-11eb-8e4e-9d180f37b52d.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125248312-342a0a00-e2f4-11eb-9691-55ea097daf9f.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125248322-368c6400-e2f4-11eb-9f55-3a46d46f87a7.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125247022-c92c0380-e2f2-11eb-9295-db495d50beb0.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125247031-cb8e5d80-e2f2-11eb-9aca-46cc32a55fa1.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125247044-cdf0b780-e2f2-11eb-828e-05e8ef77e224.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125247484-4b1c2c80-e2f3-11eb-851b-b83583f153b7.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125247051-cfba7b00-e2f2-11eb-9775-e2f6c556d4e4.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125250615-c03d3100-e2f6-11eb-9afd-a7288e59dba2.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125250925-101bf800-e2f7-11eb-910b-518a58dcb442.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125250928-114d2500-e2f7-11eb-9c01-5d944a4ece93.png" width="170px"/>
+   </p>
+</details>
+<h3>Zeitdruckmodus</h3>
+<details>
+  <summary>Click here to show screenshots!</summary>
+   
+   <p float="left">
+      <img src="https://user-images.githubusercontent.com/44426503/125248650-971ba100-e2f4-11eb-8e40-fae4bdc2b1e5.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125248668-9aaf2800-e2f4-11eb-9912-e5a01c917931.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125248679-9daa1880-e2f4-11eb-99b3-df15dc722b6b.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125248682-a00c7280-e2f4-11eb-9024-5eeaa0e806e8.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125252233-69d0f200-e2f8-11eb-89ed-4012bf27e2a0.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125252238-6b021f00-e2f8-11eb-98b4-10d4bddbb8ab.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125247679-8159ac00-e2f3-11eb-9756-92b59165235a.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125249194-3a6cb600-e2f5-11eb-9bc0-600199f19bad.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125249229-48223b80-e2f5-11eb-88d6-2ce385e6fcba.png" width="170px"/>
+   </p>
+</details>
+<h3>Überlebensmodus</h3>
+<details>
+  <summary>Click here to show screenshots!</summary>
+   
+   <p float="left">
+      <img src="https://user-images.githubusercontent.com/44426503/125248943-faa5ce80-e2f4-11eb-8204-155b45d9607e.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125248956-fd082880-e2f4-11eb-85c2-e90aaff3799e.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125248962-ff6a8280-e2f4-11eb-9850-17c006e8eb32.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125248973-01344600-e2f5-11eb-9fdd-f7811d6a8fc2.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125252364-9258ec00-e2f8-11eb-9beb-6d53588ff64e.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125247675-7f8fe880-e2f3-11eb-84fc-9cb98779481d.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125249865-f5954f00-e2f5-11eb-80ce-4995edf6c57b.png" width="170px"/>
+   </p>
+</details>
+<h3>Puzzlemodus</h3>
+<details>
+  <summary>Click here to show screenshots!</summary>
+   
+   <p float="left">
+      <img src="https://user-images.githubusercontent.com/44426503/125247771-9a625d00-e2f3-11eb-850c-6852a0716f18.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125250047-1fe70c80-e2f6-11eb-8d8a-fbe695f0fc82.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125250063-22496680-e2f6-11eb-9c18-50fb2796c110.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125250076-24abc080-e2f6-11eb-9c0d-ad1b6ba56184.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125250484-97b53700-e2f6-11eb-8823-d2ccafc76c29.png" width="170px"/>
+      <img src="https://user-images.githubusercontent.com/44426503/125250492-9a179100-e2f6-11eb-81e2-530480860d07.png" width="170px"/>
+   </p>
+</details>
+
 ## Creating an analyzed games bundle
 Follow the instructions in the ```README.md``` file of the ```Python Game Preprocessing``` program to create a gzipped annotated analysis output file
 from a pgn file containing multiple games. To use this gzipped file as an analyzed games bundle, you should copy it to the ```assets/analyzed_games``` directory of this app
